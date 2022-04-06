@@ -94,6 +94,24 @@ export const constantRouterMap = [
     ]
   },
 
+  //数据字典
+  {
+    path: '/dict',
+    component: Layout,
+    redirect: '/dict/list',
+    name: 'dict',
+    alwaysShow: true,
+    meta: { title: '数据管理', icon: 'table' },
+    children: [
+      {
+        path: 'list',
+        name: 'dictList',
+        component: () => import('@/views/dict/list'),
+        meta: { title: '数据字典', icon: 'tree' }
+      }
+    ]
+  },
+
 
   {
     path: '/example',

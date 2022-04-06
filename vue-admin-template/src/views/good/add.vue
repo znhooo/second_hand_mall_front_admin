@@ -16,15 +16,6 @@
     <el-form-item label="购买者">
         <el-input v-model="goodInfo.buyUserId"></el-input>
     </el-form-item>
-    <el-form-item label="状态">
-      <el-select v-model="goodInfo.status" placeholder="请选择当前商品状态">
-        <el-option label="已下架" value="0"></el-option>
-        <el-option label="已上架" value="1"></el-option>
-        <el-option label="已下单" value="2"></el-option>
-        <el-option label="已发货" value="3"></el-option>
-        <el-option label="已签收" value="4"></el-option>
-      </el-select>
-    </el-form-item>
     <el-form-item>
     <el-button type="primary" @click="update()">
         <span>立即修改</span>
