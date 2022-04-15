@@ -29,7 +29,11 @@
         <el-table-column prop="id" label="id" width="40" align="center"></el-table-column>
         <el-table-column prop="name" label="商品名" width="100" align="center"></el-table-column>
         <el-table-column prop="price" label="价格" width="50" align="center"></el-table-column>
-        <el-table-column prop="img" label="图片" width="80" align="center"></el-table-column>
+        <el-table-column label="图片" width="100" align="center">
+        <template slot-scope="scope" align="center">
+          <img :src="scope.row.img" width="67">
+        </template>
+      </el-table-column>
         <el-table-column prop="description" label="商品描述" width="115" align="center"></el-table-column>
         <el-table-column prop="site" label="发布地点" width="110" align="center"></el-table-column>
         <el-table-column prop="userId" label="发布者" width="70" align="center"></el-table-column>
